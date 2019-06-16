@@ -1,4 +1,3 @@
-debugger;
 const searchButton = document.querySelector(".searchBtn");
 const searchButtonImg = searchButton.querySelector("img");
 const searchInput = document.querySelector(".searchInput");

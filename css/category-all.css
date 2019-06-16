@@ -74,6 +74,85 @@
   color: black;
   text-decoration: none;
 }
+
+.lookbook__slider {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 120px;
+  background: #777777;
+  margin: auto;
+  overflow: hidden;
+}
+.slider__container {
+  display: flex;
+  position: relative;
+  transform: left 0.5s;
+  left: 0px;
+}
+.slider__element {
+  position: relative;
+  flex-basis: 200px;
+  height: 120px;
+  flex-grow: 0;
+  flex-shrink: 0;
+  background-size: cover;
+}
+.slider__element a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+
+.slider__element--1 {
+  background-image: url(../img/slider1.jpg);
+}
+
+.slider__element--2 {
+  background-image: url(../img/slider2.jpg);
+}
+
+.slider__element--3 {
+  background-image: url(../img/slider3.jpg);
+}
+
+.slider__element--4 {
+  background-image: url(../img/slider4.jpg);
+}
+
+.slider__element--5 {
+  background-image: url(../img/slider5.jpg);
+}
+
+.slider__element--6 {
+  background-image: url(../img/slider6.jpg);
+}
+
+.slider__element--7 {
+  background-image: url(../img/slider7.jpg);
+}
+
+.slider__element--8 {
+  background-image: url(../img/slider8.jpg);
+}
+.slider__button {
+  position: absolute;
+  height: 120px;
+  width: 50px;
+  background: rgba(200, 200, 200, 0.8);
+  z-index: 1000;
+  border: none;
+}
+.slider__button img {
+  width: 18px;
+  height: auto;
+}
+.slider__button--left {
+  left: 0px;
+}
+.slider__button--right {
+  right: 0px;
+}
 @media screen and (max-width: 1239px) {
   .coats__container,
   .tshirts__container,

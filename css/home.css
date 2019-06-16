@@ -39,30 +39,30 @@
   color: white;
 }
 .tile-1 {
-  background: url("../img/tile1.jpg");
+  background: url("../img/tiles/tile1.jpg");
 }
 
 .tile-2 {
-  background: url("../img/tile2.jpg");
+  background: url("../img/tiles/tile2.jpg");
 }
 .tile-3 {
-  background: url("../img/tile3.jpg");
+  background: url("../img/tiles/tile3.jpg");
 }
 .tile-4 {
-  background: url("../img/tile4.jpg");
+  background: url("../img/tiles/tile4.jpg");
 }
 .tile-5 {
-  background: url("../img/tile5.jpg");
+  background: url("../img/tiles/tile5.jpg");
 }
 .tile-6 {
-  background: url("../img/tile6.jpg");
+  background: url("../img/tiles/tile6.jpg");
 }
 .tile-7 {
-  background: url("../img/tile7.jpg");
+  background: url("../img/tiles/tile7.jpg");
 }
 
 .tile-8 {
-  background: url("../img/tile8.jpg");
+  background: url("../img/tiles/tile8.jpg");
 }
 .tiles__container h2 {
   width: 200px;
@@ -128,35 +128,35 @@
 }
 
 .slider__element--1 {
-  background-image: url(../img/slider1.jpg);
+  background-image: url(../img/slider/slider1.jpg);
 }
 
 .slider__element--2 {
-  background-image: url(../img/slider2.jpg);
+  background-image: url(../img/slider/slider2.jpg);
 }
 
 .slider__element--3 {
-  background-image: url(../img/slider3.jpg);
+  background-image: url(../img/slider/slider3.jpg);
 }
 
 .slider__element--4 {
-  background-image: url(../img/slider4.jpg);
+  background-image: url(../img/slider/slider4.jpg);
 }
 
 .slider__element--5 {
-  background-image: url(../img/slider5.jpg);
+  background-image: url(../img/slider/slider5.jpg);
 }
 
 .slider__element--6 {
-  background-image: url(../img/slider6.jpg);
+  background-image: url(../img/slider/slider6.jpg);
 }
 
 .slider__element--7 {
-  background-image: url(../img/slider7.jpg);
+  background-image: url(../img/slider/slider7.jpg);
 }
 
 .slider__element--8 {
-  background-image: url(../img/slider8.jpg);
+  background-image: url(../img/slider/slider8.jpg);
 }
 .slider__button {
   position: absolute;

@@ -12,11 +12,11 @@ function toggleSearch(e) {
   } else if (searchToggle.checked) {
     searchInput.style.visibility = "visible";
     searchButton.style.background = "#606060";
-    searchButtonImg.setAttribute("src", "img/search.png");
+    searchButtonImg.setAttribute("src", "img/icons/search.png");
   } else {
     searchInput.style.visibility = "hidden";
     searchButton.style.background = "white";
-    searchButtonImg.setAttribute("src", "img/searchDark.png");
+    searchButtonImg.setAttribute("src", "img/icons/searchDark.png");
   }
 }
 searchButton.addEventListener("click", toggleSearch);

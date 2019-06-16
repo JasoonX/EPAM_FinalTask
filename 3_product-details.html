@@ -14,32 +14,39 @@
     <header>
       <div class="header__container">
         <div class="logo">
-          <img src="img/logo.png" alt="logo" title="logo" />
+          <a href="1_home.html">
+            <img src="img/logo.png" alt="logo" title="logo" />
+          </a>
         </div>
         <nav>
           <ul>
             <li>
-              <a>Woman</a>
+              <a href="2_category-all.html">Woman</a>
             </li>
             <li>
-              <a>Men</a>
+              <a href="2_category-all.html">Men</a>
             </li>
             <li>
-              <a>Kids</a>
+              <a href="2_category-all.html">Kids</a>
             </li>
             <li>
-              <a>Coming soon</a>
+              <a href="2_category-all.html">Coming soon</a>
             </li>
           </ul>
         </nav>
         <div class="search">
-          <input type="text" placeholder="Search something..." />
-          <button>
-            <img src="img/search.png" alt="search" title="search" />
+          <input
+            type="text"
+            placeholder="Search something..."
+            class="searchInput"
+          />
+          <button class="searchBtn">
+            <img src="img/icons/searchDark.png" alt="search" title="search" />
+            <input type="checkbox" class="toggleSearchCheck" />
           </button>
         </div>
         <div class="basket">
-          <img src="img/basket.png" alt="basket" title="basket" />
+          <img src="img/icons/basket.png" alt="basket" title="basket" />
           <p>Basket (0)</p>
         </div>
       </div>
@@ -52,8 +59,17 @@
       </section>
       <section class="images">
         <div class="images__container">
-          <div class="images__bigImg"></div>
-          <div class="images__smallImgs"></div>
+          <div class="images__smallImgs">
+            <div class="images__smallImg images__smallImg--1">
+              <button class="smallImg__button"></button>
+            </div>
+            <div class="images__smallImg images__smallImg--2">
+              <button class="smallImg__button"></button>
+            </div>
+            <div class="images__smallImg images__smallImg--3">
+              <button class="smallImg__button"></button>
+            </div>
+          </div>
         </div>
       </section>
       <section class="info">
@@ -70,20 +86,71 @@
           </p>
           <h3 class="info__sizeheader">SIZE</h3>
           <div class="info__sizes">
-            <button class="sizebtn">38</button>
-            <button class="sizebtn">39</button>
-            <button class="sizebtn">40</button>
-            <button class="sizebtn">41</button>
-            <button class="sizebtn">42</button>
+            <button class="sizebtn">
+              38
+            </button>
+            <button class="sizebtn">
+              39
+            </button>
+            <button class="sizebtn">
+              40
+            </button>
+            <button class="sizebtn">
+              41
+            </button>
+            <button class="sizebtn">
+              42
+            </button>
           </div>
           <button class="button--accent medium info__addbtn">
             ADD TO CART
           </button>
         </div>
       </section>
-      <section class="slider">
-        <div class="slider__container">
-          <div class="lookbook__slider"></div>
+      <section class="lookbook">
+        <div class="lookbook__container">
+          <div class="lookbook__slider">
+            <div class="slider__container">
+              <div class="slider__element slider__element--1">
+                <a href="2_category-all.html"></a>
+              </div>
+              <div class="slider__element slider__element--2">
+                <a href="3_product-details.html"></a>
+              </div>
+              <div class="slider__element slider__element--3">
+                <a href="2_category-all.html"></a>
+              </div>
+              <div class="slider__element slider__element--4">
+                <a href="3_product-details.html"></a>
+              </div>
+              <div class="slider__element slider__element--5">
+                <a href="2_category-all.html"></a>
+              </div>
+              <div class="slider__element slider__element--6">
+                <a href="3_product-details.html"></a>
+              </div>
+              <div class="slider__element slider__element--7">
+                <a href="2_category-all.html"></a>
+              </div>
+              <div class="slider__element slider__element--8">
+                <a href="3_product-details.html"></a>
+              </div>
+            </div>
+            <button class="slider__button slider__button--left">
+              <img
+                src="img/icons/leftArrow.png"
+                alt="leftArrow"
+                name="leftArrow"
+              />
+            </button>
+            <button class="slider__button slider__button--right">
+              <img
+                src="img/icons/rightArrow.png"
+                alt="rightArrow"
+                name="rightArrow"
+              />
+            </button>
+          </div>
         </div>
       </section>
     </main>
@@ -117,10 +184,18 @@
           <p>Shopper is made with love in Warsaw,</p>
           <p>2014 © All rights reserved. El Passion</p>
           <div>
-            <img src="img/twitter.png" alt="twitter" class="footer__social" />
-            <img src="img/facebook.png" alt="facebook" class="footer__social" />
             <img
-              src="img/instagram.png"
+              src="img/icons/twitter.png"
+              alt="twitter"
+              class="footer__social"
+            />
+            <img
+              src="img/icons/facebook.png"
+              alt="facebook"
+              class="footer__social"
+            />
+            <img
+              src="img/icons/instagram.png"
               alt="instagram"
               class="footer__social"
             />
@@ -128,5 +203,8 @@
         </section>
       </div>
     </footer>
+
+    <script src="js/global.js"></script>
+    <script src="js/product-details.js"></script>
   </body>
 </html>

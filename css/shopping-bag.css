@@ -1,0 +1,72 @@
+.shoppingbag {
+  text-align: center;
+}
+.shoppingbag__container {
+  width: 95%;
+  margin: auto;
+}
+table {
+  width: 100%;
+  text-align: left;
+  border-collapse: collapse;
+}
+th,
+td {
+  padding: 15px 5px;
+}
+tbody td {
+  height: 150px;
+}
+td input {
+  width: 30px;
+}
+table td:nth-child(7n) {
+  padding-left: 25px;
+}
+.productname {
+  position: relative;
+  top: 50px;
+}
+.shoppingbag__container h2 {
+  margin: 50px 0px 0px;
+}
+.shoppingbag__container p {
+  margin: 0px 0px 100px;
+  color: #606060;
+}
+tfoot {
+  background: rgb(249, 249, 249);
+  border: none;
+}
+.subtotal {
+  font-family: "latoBold", sans-serif;
+}
+.price {
+  color: #f68236;
+  font-weight: 900;
+}
+.order__container {
+  width: 95%;
+  margin: 100px auto 0px;
+  text-align: right;
+  padding-bottom: 50px;
+  border-bottom: 1px solid #e5e5e5;
+}
+.order a {
+  margin-right: 100px;
+  text-decoration: underline;
+}
+.order {
+  padding-bottom: 75px;
+}
+@media screen and (max-width: 1239px) {
+}
+
+@media screen and (max-width: 1023px) {
+}
+
+@media screen and (max-width: 767px) {
+}
+
+@media screen and (max-width: 413px) {
+}

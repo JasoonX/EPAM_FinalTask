@@ -19,6 +19,9 @@ function order() {
 
 function tableDeleteItem(e) {
   let row = e.target.parentNode.parentNode;
+  if (row.nodeName !== "TR") {
+    row = row.parentNode;
+  }
   let model = row.querySelector(".productname h3").innerText;
   let size = row.querySelector(".size").innerText;
   if (e.target.nodeName === "IMG") {

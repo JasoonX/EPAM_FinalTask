@@ -296,7 +296,7 @@ _:-ms-fullscreen,
   .tiles__container .tile-1 {
     height: 250px;
   }
-  _ .tiles__container .tile-2 {
+  .tiles__container .tile-2 {
     height: 200px;
   }
 
@@ -314,7 +314,7 @@ _:-ms-fullscreen,
   }
 
   .tiles__container .tile-2 h2 {
-    margin-top: 35px;
+    margin-top: 75px;
   }
 
   .tiles__container .tile-8 h2 {

@@ -95,6 +95,9 @@ tfoot {
 }
 
 @media screen and (max-width: 1024px) {
+  colgroup {
+    display: none;
+  }
   thead {
     display: none;
   }

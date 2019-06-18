@@ -1,10 +1,19 @@
 .firstSection,
 .tiles,
-.signup {
+.signup,
+.slider {
   text-align: center;
   background: white;
-  width: 1240px;
+  width: 100%;
   margin: auto;
+  max-width: 1240px;
+  min-width: 1240px;
+}
+
+_:-ms-fullscreen :root .firstSection,
+_:-ms-fullscreen :root .tiles,
+_:-ms-fullscreen :root .signup {
+  width: 92%;
 }
 .firstSection__container {
   padding: 200px;
@@ -19,7 +28,7 @@
 .tiles__container {
   display: flex;
   flex-wrap: wrap;
-  width: 1180px;
+  width: 95%;
   margin: auto;
 }
 .tiles__container a {
@@ -32,9 +41,12 @@
 .tiles__container a:hover {
   text-decoration: none;
 }
+
 .tiles__container .tile {
-  width: 295px;
-  height: 295px;
+  width: 21.5vw; /*20vw*/
+  max-width: 294px;
+  height: 21.5vw;
+  max-height: 270px;
   background-size: cover;
   color: white;
 }
@@ -69,7 +81,7 @@
   margin: 75px auto 10px;
 }
 .signup__container {
-  padding: 100px 0px;
+  padding: 100px 0px 50px;
   font-size: 11px;
 }
 
@@ -80,6 +92,12 @@
   width: 476px;
 }
 
+.signup__container form input::placeholder {
+  color: black;
+  padding: 5px 0px 5px 0px;
+  font-family: "latoItalic";
+  font-size: 13px;
+}
 .signup__container form button {
   position: relative;
   top: 0.5px;
@@ -92,7 +110,7 @@
   color: white;
 }
 .signup__container form {
-  margin: 50px;
+  margin: 50px auto;
 }
 .signup__container .subHeaderSmall {
   margin-top: 10px;
@@ -101,7 +119,7 @@
 .signup__slider {
   display: flex;
   position: relative;
-  width: 100%;
+  width: 1200px;
   height: 120px;
   background: #777777;
   margin: auto;
@@ -110,8 +128,9 @@
 .slider__container {
   display: flex;
   position: relative;
-  transform: left 0.5s;
   left: 0px;
+
+  transition: left 0.5s;
 }
 .slider__element {
   position: relative;
@@ -179,35 +198,242 @@
 .tiles__container,
 .signup__container,
 .firstSection__container {
-  width: 1180px;
+  width: 95%;
+  max-width: 1180px;
   margin: auto;
 }
 
-@media screen and (max-width: 1239px) {
-  .tiles__container,
-  .signup__container,
+_:-ms-fullscreen,
+:root .tiles__container .tile {
+  width: 21.5vw; /*23.4vw*/
+  max-width: 294px;
+  height: 21.5vw;
+  max-height: 294px;
+}
+.form__validationDiv {
+  position: relative;
+  right: 2px;
+  bottom: 20px;
+  width: 50%;
+  margin: auto;
+}
+.form__validationDiv--invalid {
+  box-shadow: 0 10px 24px -12px #ef424c;
+}
+
+.form__validationDiv--valid {
+  box-shadow: 0 10px 24px -12px #4caf50;
+}
+.form__validationDiv p {
+  padding: 10px;
+}
+.footer__container {
+  padding-top: 50px;
+}
+@media screen and (max-width: 1240px) {
+  .firstSection,
+  .tiles,
+  .signup,
+  .slider {
+    width: 100%;
+    max-width: 1240px;
+    min-width: 0px;
+  }
+
+  .signup__slider {
+    width: 1000px;
+  }
+
+  .tiles__container .tile {
+    width: 25%; /*23.4vw*/
+    max-width: 290px;
+    height: 23.75vw;
+    max-height: 290px;
+  }
+
+  _:-ms-fullscreen,
+  :root .tiles__container .tile {
+    width: 23.3vw; /*23.4vw*/
+    max-width: 290px;
+    height: 23.3vw;
+    max-height: 290px;
+  }
+
+  _:-ms-fullscreen,
+  :root .firstSection,
+  _:-ms-fullscreen,
+  :root .tiles,
+  _:-ms-fullscreen,
+  :root .signup {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .signup__slider {
+    width: 800px;
+  }
   .firstSection__container {
-    width: 964px;
+    padding: 20px;
+  }
+  .firstSection__button {
+    display: none;
+  }
+  .tiles__container {
+    flex-direction: column;
+  }
+  _:-ms-fullscreen,
+  :root .tiles__container .tile {
+    width: 100%;
+    max-width: 500px;
     margin: auto;
   }
   .tiles__container .tile {
-    width: 241px;
-    height: 241px;
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
+  }
+  .tiles__container .tile-1 {
+    height: 250px;
+  }
+  _ .tiles__container .tile-2 {
+    height: 200px;
+  }
+
+  .tiles__container .tile-3 {
+    height: 150px;
+  }
+
+  .tiles__container .tile-4 {
+    height: 300px;
+  }
+
+  .tiles__container .tile-4 h2,
+  .tiles__container .tile-5 h2 {
+    margin-top: 125px;
+  }
+
+  .tiles__container .tile-2 h2 {
+    margin-top: 35px;
+  }
+
+  .tiles__container .tile-8 h2 {
+    margin-top: 100px;
+  }
+  .tiles__container .tile-5 {
+    height: 300px;
+  }
+  .tiles__container .tile-6 {
+    height: 250px;
+  }
+  .tiles__container .tile-7 {
+    height: 200px;
+  }
+  .tiles__container .tile-8 {
+    height: 250px;
+  }
+  _:-ms-fullscreen,
+  :root .tiles__container .tile-1 {
+    height: 250px;
+  }
+  _:-ms-fullscreen,
+  :root .tiles__container .tile-2 {
+    height: 200px;
+  }
+
+  _:-ms-fullscreen,
+  :root .tiles__container .tile-3 {
+    height: 150px;
+  }
+
+  _:-ms-fullscreen,
+  :root .tiles__container .tile-4 {
+    height: 300px;
+  }
+  _:-ms-fullscreen,
+  :root .tiles__container .tile-4 h2,
+  _:-ms-fullscreen,
+  :root .tiles__container .tile-5 h2 {
+    margin-top: 125px;
+  }
+  _:-ms-fullscreen,
+  :root .tiles__container .tile-5 {
+    height: 300px;
+  }
+
+  _:-ms-fullscreen,
+  :root .tiles__container .tile-6 {
+    height: 250px;
+  }
+
+  _:-ms-fullscreen,
+  :root .tiles__container .tile-7 {
+    height: 200px;
+  }
+
+  _:-ms-fullscreen,
+  :root .tiles__container .tile-8 {
+    height: 250px;
+  }
+  .tiles__container h2 {
+    width: 100%;
+    font-size: 18px;
+  }
+  .tile p {
+    line-height: 1;
+  }
+  .signup__container {
+    padding-bottom: 50px;
+  }
+  .signup__container form input {
+    width: 60%;
+    height: initial;
+    height: 47px;
+  }
+
+  .signup__container form input::placeholder {
+    padding: 0px;
+    font-size: 18px;
+  }
+
+  .signup__container form button {
+    top: 3px;
+    height: 47px;
+    width: 75px;
+    font-size: 18px;
+  }
+  _:-ms-fullscreen,
+  :root .signup__container form button {
+    top: -2px;
+    height: 47px;
+    width: 75px;
+    font-size: 18px;
   }
 }
 
-@media screen and (max-width: 1023px) {
-  .tiles__container {
-    width: 768px;
+@media screen and (max-width: 840px) {
+  .signup__slider {
+    width: 600px;
   }
+}
+@media screen and (max-width: 768px) {
   .tiles__container .tile {
-    width: 241px;
-    height: 120px;
+    max-width: 400px;
+  }
+
+  .signup__container form input {
+    width: 80%;
   }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 620px) {
+  .signup__slider {
+    width: 400px;
+  }
 }
-
-@media screen and (max-width: 413px) {
+@media screen and (max-width: 414px) {
+  body,
+  section {
+    overflow-y: scroll;
+  }
 }

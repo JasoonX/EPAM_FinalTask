@@ -84,7 +84,6 @@ a:hover {
 .subHeaderSmall {
   font-family: Georgia, "Times New Roman", Times, serif;
   font-style: italic;
-
   letter-spacing: 1px;
 }
 
@@ -141,10 +140,11 @@ a:hover {
 }
 
 table tbody tr,
-table thead tr {
+table thead tr,
+table tfoot tr {
   font-size: 13px;
   color: #909090;
-  border-bottom: solid 1px #e5e5e5;
+  border-top: solid 1px #e5e5e5;
 }
 
 td {
@@ -159,8 +159,11 @@ li {
 nav ul {
   display: flex;
 }
-
+header .basket {
+  color: black;
+}
 .header__container {
+  position: relative;
   border-bottom: solid 1px rgb(229, 229, 229);
   padding: 40px 0px;
   width: 95%;
@@ -177,7 +180,13 @@ nav a {
   color: black;
 }
 .search {
-  margin-left: 275px;
+  position: absolute;
+  right: 120px;
+}
+
+_:-ms-fullscreen,
+:root .search {
+  right: 120px;
 }
 .search input {
   height: 40px;
@@ -200,24 +209,29 @@ nav a {
   /*background: #606060;*/
   background: white;
   border: 1px solid #606060;
+  cursor: pointer;
 }
 
 .searchInput {
   visibility: hidden;
+}
+.basket {
+  position: absolute;
+  right: 0px;
 }
 .basket p {
   display: inline-block;
 }
 .footer__container {
   display: flex;
-  width: 1180px;
+  width: 95%;
   margin: auto;
 }
 .footer__subsection {
   display: flex;
   flex-direction: column;
   border-left: solid 1px rgb(229, 229, 229);
-  width: 25%;
+  width: 24%;
   text-align: left;
 }
 
@@ -243,10 +257,6 @@ nav a {
 .footer__subsection:first-child p {
   padding-left: 0px;
 }
-.container {
-  width: 95%;
-  margin: auto;
-}
 body {
   background: rgb(229, 229, 229);
 }
@@ -258,23 +268,99 @@ footer {
   margin: auto;
   background: white;
 }
-@media screen and (max-width: 1239px) {
-  .header__container,
-  .footer__container {
-    width: 964px;
-  }
-  .search {
-    margin-left: 50px;
-  }
+.shiftedInput {
+  width: 100%;
+}
+.shiftedSearch {
+  top: 75px !important;
+  right: 0px !important;
+  width: 100% !important;
+}
+.shiftedInputBtn {
+  position: absolute !important;
+  top: 0px !important;
+  right: 0px !important;
 }
 
-@media screen and (max-width: 1023px) {
+_:-ms-fullscreen :root .shiftedSearch {
+  position: absolute;
+  top: 75px;
+  right: 0px;
+  width: 100%;
+}
+
+_:-ms-fullscreen :root .shiftedInputBtn {
+  top: 50px;
+}
+@media screen and (max-width: 1240px) {
+  main,
+  header,
+  footer {
+    width: 100%;
+    max-width: 1240px;
+    min-width: 0px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .header__container {
+    flex-direction: column;
+    padding: 20px 0px 0px;
+  }
   nav ul {
     flex-direction: column;
+    align-items: center;
+    border-top: 1px solid #e5e5e5;
+    margin-top: 20px;
+  }
+  nav li {
+    margin: 20px;
+  }
+  .basket {
+    top: 20px;
+    right: -20px;
+  }
+
+  .footer__subsection--collection,
+  .footer__subsection--shop,
+  .footer__subsection--site {
+    display: none;
+  }
+  .footer__subsection--social {
+    border: none;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+  }
+  .footer__subsection--social h3 {
+    font-size: 22px;
+    line-height: 1;
+    letter-spacing: 5px;
+    font-weight: 900;
+    margin-bottom: 25px;
+  }
+  .footer__subsection--social div {
+    margin-top: 25px;
+  }
+
+  .breadcrumbs .breadcrumbsText {
+    text-align: center;
+    font-size: 14px;
+  }
+  .footer__social {
+    margin-right: 10px;
+  }
+
+  _:-ms-fullscreen,
+  :root .search {
+    top: 20px;
   }
 }
-@media screen and (max-width: 767px) {
+
+@media screen and (max-width: 768px) {
+  nav ul {
+    margin-top: 20px;
+  }
 }
 
-@media screen and (max-width: 413px) {
+@media screen and (min-width: 414px) {
 }

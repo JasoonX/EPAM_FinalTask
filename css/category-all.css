@@ -7,8 +7,7 @@
 .breadcrumbs__container,
 .coats__container,
 .outerwear__container,
-.tshirts__container,
-.lookbook__container {
+.tshirts__container {
   width: 95%;
   margin: auto;
 }
@@ -17,20 +16,25 @@
 .outerwear,
 .tshirts,
 .lookbook {
-  width: 1240px;
+  width: 100%;
+  max-width: 1240px;
   background: white;
+  margin: auto;
+}
+.lookbook__container {
+  width: 1200px;
   margin: auto;
 }
 .coats__container,
 .outerwear__container,
 .tshirts__container {
-  border-bottom: solid 1px rgb(17, 12, 12);
+  border-bottom: solid 1px #e5e5e5;
   background: white;
 }
 .coats__container h2,
 .outerwear__container h2,
 .tshirts__container h2 {
-  padding: 100px;
+  padding: 100px 0px;
 }
 .coats__pics,
 .outerwear__pics,
@@ -41,7 +45,12 @@
 .coats__product,
 .outerwear__product,
 .tshirts__product {
-  margin-right: 116px;
+  margin-right: 115px; /*8.5vw*/
+}
+_:-ms-fullscreen :root .coats__product,
+_:-ms-fullscreen :root .outerwear__product,
+_:-ms-fullscreen :root .tshirts__product {
+  margin-right: 10px; /*8.5vw*/
 }
 .coats__pics a:last-child .coats__product,
 .outerwear__pics a:last-child .outerwear__product,
@@ -58,8 +67,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 208px;
-  height: 256px;
+  width: 15.2vw;
+  max-width: 208px; /*208px*/
+  height: 17vw;
+  max-height: 256px; /*256px*/
   border: 1px solid #e5e5e5;
 }
 .coats__img {
@@ -99,8 +110,8 @@
 .slider__container {
   display: flex;
   position: relative;
-  transform: left 0.5s;
   left: 0px;
+  transition: left 0.5s;
 }
 .slider__element {
   position: relative;
@@ -165,22 +176,83 @@
 .slider__button--right {
   right: 0px;
 }
-@media screen and (max-width: 1239px) {
-  .coats__container,
-  .tshirts__container,
-  .lookbook__container,
-  .breadcrumbs__container,
-  .outerwear__container {
-    width: 964px;
-    margin: auto;
+@media screen and (max-width: 1240px) {
+  .coats__product,
+  .outerwear__product,
+  .tshirts__product {
+    margin-right: 11vw;
+  }
+
+  .lookbook__container {
+    width: 1000px;
   }
 }
 
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1024px) {
+  .img--container {
+    width: 208px;
+    max-width: 208px;
+    height: 256px;
+    max-height: 256px;
+    /*208px*/
+  }
+  .lookbook__container {
+    width: 800px;
+  }
+  .coats__pics,
+  .outerwear__pics,
+  .tshirts__pics {
+    flex-wrap: wrap;
+    width: 70%;
+    max-width: 623px;
+    margin: auto;
+    justify-content: space-around;
+  }
+
+  .coats__product,
+  .outerwear__product,
+  .tshirts__product {
+    margin-right: 0;
+  }
+  .coats__product p {
+    margin-bottom: 10px;
+  }
+  .coats__product h3 {
+    margin-top: 20px;
+  }
+  .coats__container h2,
+  .outerwear__container h2,
+  .tshirts__container h2 {
+    padding: 50px 0px;
+  }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 840px) {
+  .lookbook__container {
+    width: 600px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .img--container {
+    width: 150px;
+    height: 176px;
+    /*208px*/
+  }
+
+  .coats__pics,
+  .outerwear__pics,
+  .tshirts__pics {
+    width: 100%;
+    max-width: 449px;
+    margin: auto;
+    justify-content: space-around;
+  }
 }
 
-@media screen and (max-width: 413px) {
+@media screen and (max-width: 640px) {
+  .lookbook__container {
+    width: 400px;
+  }
+}
+@media screen and (max-width: 414px) {
 }

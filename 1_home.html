@@ -30,7 +30,7 @@
               <a href="2_category-all.html">Kids</a>
             </li>
             <li>
-              <a href="2_category-all.html">Coming soon</a>
+              <a href="2_category-all.html">Coming Soon</a>
             </li>
           </ul>
         </nav>
@@ -45,13 +45,14 @@
             <input type="checkbox" class="toggleSearchCheck" />
           </button>
         </div>
-        <div class="basket">
-          <img src="img/icons/basket.png" alt="basket" title="basket" />
-          <p>Basket (0)</p>
-        </div>
+        <a href="4_shopping-bag.html">
+          <div class="basket">
+            <img src="img/icons/basket.png" alt="basket" title="basket" />
+            <p>Basket (0)</p>
+          </div>
+        </a>
       </div>
     </header>
-
     <main>
       <section class="firstSection">
         <div class="firstSection__container">
@@ -100,7 +101,10 @@
             </a>
           </div>
           <div class="tile tile-8">
-            <a href="2_category-all.html"></a>
+            <a href="3_product-details.html">
+              <h2>ELEGANT SHOES</h2>
+              <p class="subHeaderSmall">BRAIDED LEATHER</p>
+            </a>
           </div>
         </div>
       </section>
@@ -112,62 +116,72 @@
             penatibus et ultrices volutpat.
           </p>
           <form>
-            <input type="email" placeholder="Your e-mail" />
-            <button>
+            <div class="form__validationDiv form__validationDiv--valid">
+              <p>Enter valid email adress.</p>
+            </div>
+            <input class="signup__email" placeholder="Your e-mail" required />
+            <button class="signup__button">
               add
             </button>
           </form>
-          <div class="signup__slider">
-            <div class="slider__container">
-              <div class="slider__element slider__element--1">
-                <a href="2_category-all.html"></a>
-              </div>
-              <div class="slider__element slider__element--2">
-                <a href="3_product-details.html"></a>
-              </div>
-              <div class="slider__element slider__element--3">
-                <a href="2_category-all.html"></a>
-              </div>
-              <div class="slider__element slider__element--4">
-                <a href="3_product-details.html"></a>
-              </div>
-              <div class="slider__element slider__element--5">
-                <a href="2_category-all.html"></a>
-              </div>
-              <div class="slider__element slider__element--6">
-                <a href="3_product-details.html"></a>
-              </div>
-              <div class="slider__element slider__element--7">
-                <a href="2_category-all.html"></a>
-              </div>
-              <div class="slider__element slider__element--8">
-                <a href="3_product-details.html"></a>
-              </div>
+       
+        </div>
+      </section>
+      <section class="slider">
+        <div class="signup__slider">
+          <div class="slider__container">
+            <div class="slider__element slider__element--1">
+              <a href="2_category-all.html"></a>
             </div>
-            <button class="slider__button slider__button--left">
-              <img src="img/icons/leftArrow.png" alt="leftArrow" name="leftArrow" />
-            </button>
-            <button class="slider__button slider__button--right">
-              <img
-                src="img/icons/rightArrow.png"
-                alt="rightArrow"
-                name="rightArrow"
-              />
-            </button>
+            <div class="slider__element slider__element--2">
+              <a href="3_product-details.html"></a>
+            </div>
+            <div class="slider__element slider__element--3">
+              <a href="2_category-all.html"></a>
+            </div>
+            <div class="slider__element slider__element--4">
+              <a href="3_product-details.html"></a>
+            </div>
+            <div class="slider__element slider__element--5">
+              <a href="2_category-all.html"></a>
+            </div>
+            <div class="slider__element slider__element--6">
+              <a href="3_product-details.html"></a>
+            </div>
+            <div class="slider__element slider__element--7">
+              <a href="2_category-all.html"></a>
+            </div>
+            <div class="slider__element slider__element--8">
+              <a href="3_product-details.html"></a>
+            </div>
           </div>
+          <button class="slider__button slider__button--left">
+            <img
+              src="img/icons/leftArrow.png"
+              alt="leftArrow"
+              name="leftArrow"
+            />
+          </button>
+          <button class="slider__button slider__button--right">
+            <img
+              src="img/icons/rightArrow.png"
+              alt="rightArrow"
+              name="rightArrow"
+            />
+          </button>
         </div>
       </section>
     </main>
     <footer>
       <div class="footer__container">
-        <section class="footer__subsection">
+        <section class="footer__subsection footer__subsection--collection">
           <h3>COLLECTION</h3>
           <p>Woman</p>
           <p>Man</p>
           <p>Kids</p>
           <p>Coming soon</p>
         </section>
-        <section class="footer__subsection">
+        <section class="footer__subsection footer__subsection--site ">
           <h3>SITE</h3>
           <p>Terms of Service</p>
           <p>Privacy Policy</p>
@@ -176,20 +190,28 @@
 
           <p>Support</p>
         </section>
-        <section class="footer__subsection">
+        <section class="footer__subsection footer__subsection--shop">
           <h3>SHOP</h3>
           <p>About us</p>
           <p>Shipping Methods</p>
           <p>Career</p>
           <p>Contact</p>
         </section>
-        <section class="footer__subsection">
+        <section class="footer__subsection footer__subsection--social">
           <h3>SOCIAL</h3>
           <p>Shopper is made with love in Warsaw,</p>
           <p>2014 © All rights reserved. El Passion</p>
           <div>
-            <img src="img/icons/twitter.png" alt="twitter" class="footer__social" />
-            <img src="img/icons/facebook.png" alt="facebook" class="footer__social" />
+            <img
+              src="img/icons/twitter.png"
+              alt="twitter"
+              class="footer__social"
+            />
+            <img
+              src="img/icons/facebook.png"
+              alt="facebook"
+              class="footer__social"
+            />
             <img
               src="img/icons/instagram.png"
               alt="instagram"
@@ -201,7 +223,5 @@
     </footer>
     <script src="js/global.js"></script>
     <script src="js/home.js"></script>
-
-    <script type="module" src="js/slider.js"></script>
   </body>
 </html>

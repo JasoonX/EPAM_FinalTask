@@ -30,7 +30,7 @@
               <a href="2_category-all.html">Kids</a>
             </li>
             <li>
-              <a href="2_category-all.html">Coming soon</a>
+              <a href="2_category-all.html">Coming Soon</a>
             </li>
           </ul>
         </nav>
@@ -45,10 +45,12 @@
             <input type="checkbox" class="toggleSearchCheck" />
           </button>
         </div>
-        <div class="basket">
-          <img src="img/icons/basket.png" alt="basket" title="basket" />
-          <p>Basket (0)</p>
-        </div>
+        <a href="4_shopping-bag.html">
+          <div class="basket">
+            <img src="img/icons/basket.png" alt="basket" title="basket" />
+            <p>Basket (0)</p>
+          </div>
+        </a>
       </div>
     </header>
     <main>
@@ -83,13 +85,15 @@
               </tr>
             </thead>
             <tbody>
-              <tr>
+              <tr class="product">
                 <td>
                   <img
-                    src=""
+                    src="img/product_images/thumbnail1.jpg"
                     width="100"
                     height="100"
                     style="background: gray"
+                    alt="product1"
+                    name="product1"
                   />
                 </td>
 
@@ -99,19 +103,21 @@
                     <p>Ref. 2514/302</p>
                   </div>
                 </td>
-                <td>Black</td>
-                <td>39</td>
-                <td><input type="number" value="1" /></td>
-                <td>€ 99.95</td>
-                <td><img src="img/x.png" /></td>
+                <td class="color">Black</td>
+                <td class="size">39</td>
+                <td><input type="number" value="1" min="1" /></td>
+                <td class="product__price">€ 99.95</td>
+                <td><img src="img/icons/x.png" alt="delete" name="delete" /></td>
               </tr>
-              <tr>
+              <tr class="product">
                 <td>
                   <img
-                    src=""
+                    src="img/product_images/thumbnail1.jpg"
                     width="100"
                     height="100"
                     style="background: gray"
+                    alt="product2"
+                    name="product2"
                   />
                 </td>
 
@@ -121,19 +127,22 @@
                     <p>Ref. 2514/302</p>
                   </div>
                 </td>
-                <td>One Color</td>
-                <td>M</td>
-                <td><input type="number" value="1" /></td>
-                <td>€ 99.95</td>
-                <td><img src="img/x.png" /></td>
+                <td class="color">One Color</td>
+                <td class="size">M</td>
+                <td><input type="number" value="1" min="1" /></td>
+                <td class="product__price">€ 99.95</td>
+                <td>
+                  <img src="img/icons/x.png" alt="delete" name="delete" />
+                </td>
               </tr>
-              <tr>
+              <tr class="product">
                 <td>
                   <img
-                    src=""
+                    src="img/product_images/thumbnail1.jpg"
                     width="100"
                     height="100"
-                    style="background: gray"
+                    alt="product3"
+                    name="product3"
                   />
                 </td>
                 <td>
@@ -142,11 +151,13 @@
                     <p>Ref. 2514/302</p>
                   </div>
                 </td>
-                <td>One Color</td>
-                <td>S</td>
-                <td><input type="number" value="1" /></td>
-                <td>€ 99.95</td>
-                <td><img src="img/x.png" /></td>
+                <td class="color">One Color</td>
+                <td class="size">S</td>
+                <td><input type="number" value="1" min="1" /></td>
+                <td class="product__price">€ 99.95</td>
+                <td>
+                  <img src="img/icons/x.png" alt="delete" name="delete" />
+                </td>
               </tr>
             </tbody>
             <tfoot>
@@ -165,7 +176,7 @@
         </div>
         <div class="order">
           <div class="order__container">
-            <a>Continue Shopping</a>
+            <a href="1_home.html">Continue Shopping</a>
             <button class="button--accent medium">ORDER NOW</button>
           </div>
         </div>
@@ -173,14 +184,14 @@
     </main>
     <footer>
       <div class="footer__container">
-        <section class="footer__subsection">
+        <section class="footer__subsection footer__subsection--collection">
           <h3>COLLECTION</h3>
           <p>Woman</p>
           <p>Man</p>
           <p>Kids</p>
           <p>Coming soon</p>
         </section>
-        <section class="footer__subsection">
+        <section class="footer__subsection footer__subsection--site ">
           <h3>SITE</h3>
           <p>Terms of Service</p>
           <p>Privacy Policy</p>
@@ -189,14 +200,14 @@
 
           <p>Support</p>
         </section>
-        <section class="footer__subsection">
+        <section class="footer__subsection footer__subsection--shop">
           <h3>SHOP</h3>
           <p>About us</p>
           <p>Shipping Methods</p>
           <p>Career</p>
           <p>Contact</p>
         </section>
-        <section class="footer__subsection">
+        <section class="footer__subsection footer__subsection--social">
           <h3>SOCIAL</h3>
           <p>Shopper is made with love in Warsaw,</p>
           <p>2014 © All rights reserved. El Passion</p>
@@ -220,5 +231,8 @@
         </section>
       </div>
     </footer>
+    <script src="js/global.js"></script>
+
+    <script src="js/shopping-bag.js"></script>
   </body>
 </html>

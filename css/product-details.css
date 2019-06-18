@@ -1,10 +1,21 @@
 .info,
 .breadcrumbs,
-.lookbook,
-.images {
-  width: 1240px;
+.images,
+.lookbook {
+  width: 100%;
+  max-width: 1240px;
   background: white;
   margin: auto;
+}
+.lookbook__container {
+  width: 1200px;
+  margin: auto;
+}
+_:-ms-fullscreen :root .info,
+_:-ms-fullscreen :root .breadcrumbs,
+_:-ms-fullscreen :root .images,
+_:-ms-fullscreen :root .lookbook {
+  width: 92%;
 }
 .images {
   padding: 50px 0px;
@@ -104,7 +115,7 @@
 .lookbook__slider {
   display: flex;
   position: relative;
-  width: 95%;
+  width: 100%;
   height: 120px;
   background: #777777;
   margin: auto;
@@ -113,8 +124,9 @@
 .slider__container {
   display: flex;
   position: relative;
-  transform: left 0.5s;
+
   left: 0px;
+  transition: left 0.5s;
 }
 .slider__element {
   position: relative;
@@ -192,14 +204,50 @@
 .sizebtnChosen:hover {
   background: #e67429;
 }
-@media screen and (max-width: 1239px) {
+@media screen and (max-width: 1240px) {
+  _:-ms-fullscreen,
+  :root .info,
+  _:-ms-fullscreen,
+  :root .breadcrumbs,
+  _:-ms-fullscreen,
+  :root .lookbook,
+  _:-ms-fullscreen,
+  :root .images {
+    width: 100%;
+  }
+  .lookbook__container {
+    width: 1000px;
+  }
 }
 
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1024px) {
+  .images__container {
+    width: 400px;
+    height: 300px;
+    margin: auto;
+  }
+
+  .info__price {
+    font-size: 20px;
+  }
+  .info__addbtn {
+    width: 50%;
+  }
+  .lookbook {
+    display: none;
+  }
+  footer {
+    padding-top: 30px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .info__container h2 {
+    font-size: 22px;
+  }
+  .info__article {
+    font-size: 12px;
+  }
 }
 
-@media screen and (max-width: 767px) {
-}
-
-@media screen and (max-width: 413px) {
+@media screen and (max-width: 414px) {
 }

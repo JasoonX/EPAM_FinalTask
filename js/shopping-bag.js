@@ -13,8 +13,11 @@ table.addEventListener("change", tableChangeAmount);
 function order() {
   localStorage.removeItem("cart");
   let link = document.createElement("a");
-  link.setAttribute("href", "5_thank-you.html");
+  link.setAttribute("type", "hidden");
+  link.href = "5_thank-you.html";
+  document.body.appendChild(link);
   link.click();
+  link.remove();
 }
 
 function tableDeleteItem(e) {

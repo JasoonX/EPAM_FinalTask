@@ -19,9 +19,10 @@ if (localStorage) {
   } else {
     basket.innerText = "Basket (3)";
   }
+} else {
+  basket.innerText = "Basket (3)";
 }
 searchInput.addEventListener("keydown", onPress);
-searchInput.addEventListener("keypress", onPress);
 searchButton.addEventListener("click", toggleSearch);
 function getWidth() {
   return window.innerWidth || document.body.clientWidth;
@@ -71,6 +72,7 @@ function onPress(e) {
     link.click();
   } else if (e.key === "Escape" || e.key === "Esc") {
     searchToggle.checked = !searchToggle.checked;
+    unshiftSearch();
     hideInput();
   }
 }

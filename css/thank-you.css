@@ -47,4 +47,14 @@ h1 {
 }
 
 @media screen and (max-width: 414px) {
+  _:-ms-fullscreen :root .thankyou {
+    width: 414px;
+    max-width: 414px;
+    min-width: 414px;
+  }
+  .thankyou {
+    width: 414px;
+    max-width: 414px;
+    min-width: 414px;
+  }
 }

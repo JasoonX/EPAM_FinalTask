@@ -187,4 +187,19 @@ tfoot {
 }
 
 @media screen and (max-width: 414px) {
+  .shoppingbag,
+  .breadcrumbs {
+    width: 414px;
+    min-width: 414px;
+    max-width: 414px;
+  }
+
+  _:-ms-fullscreen,
+  :root .shoppingbag,
+  _:-ms-fullscreen,
+  :root .breadcrumbs {
+    width: 414px;
+    min-width: 414px;
+    max-width: 414px;
+  }
 }

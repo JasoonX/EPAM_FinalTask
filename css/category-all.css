@@ -255,4 +255,13 @@ _:-ms-fullscreen :root .tshirts__product {
   }
 }
 @media screen and (max-width: 414px) {
+  .coats,
+  .breadcrumbs,
+  .outerwear,
+  .tshirts,
+  .lookbook {
+    width: 414px;
+    max-width: 414px;
+    min-width: 414px;
+  }
 }

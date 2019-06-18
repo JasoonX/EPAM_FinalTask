@@ -298,7 +298,7 @@ _:-ms-fullscreen :root .shiftedInputBtn {
   footer {
     width: 100%;
     max-width: 1240px;
-    min-width: 0px;
+    min-width: 414px;
   }
 }
 @media screen and (max-width: 1024px) {
@@ -362,5 +362,12 @@ _:-ms-fullscreen :root .shiftedInputBtn {
   }
 }
 
-@media screen and (min-width: 414px) {
+@media screen and (max-width: 414px) {
+  main,
+  header,
+  footer {
+    width: 414px;
+    min-width: 414px;
+    max-width: 414px;
+  }
 }

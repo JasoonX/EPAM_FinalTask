@@ -250,4 +250,21 @@ _:-ms-fullscreen :root .lookbook {
 }
 
 @media screen and (max-width: 414px) {
+  .info,
+  .breadcrumbs,
+  .images,
+  .lookbook {
+    width: 414px;
+    max-width: 414px;
+    min-width: 414px;
+  }
+
+  _:-ms-fullscreen :root .info,
+  _:-ms-fullscreen :root .breadcrumbs,
+  _:-ms-fullscreen :root .images,
+  _:-ms-fullscreen :root .lookbook {
+    width: 414px;
+    max-width: 414px;
+    min-width: 414px;
+  }
 }

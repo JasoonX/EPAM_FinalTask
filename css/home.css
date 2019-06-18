@@ -432,8 +432,12 @@ _:-ms-fullscreen,
   }
 }
 @media screen and (max-width: 414px) {
-  body,
-  section {
-    overflow-y: scroll;
+  .firstSection,
+  .tiles,
+  .signup,
+  .slider {
+    width: 414px;
+    min-width: 414px;
+    max-width: 414px;
   }
 }

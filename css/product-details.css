@@ -44,6 +44,8 @@ _:-ms-fullscreen :root .lookbook {
   margin: 10px 0px 0px;
   background-size: cover;
   border: 1px solid #606060;
+  filter: brightness(100%);
+  transition: filter 0.5s;
 }
 .smallImg__button {
   width: 100%;
@@ -96,6 +98,7 @@ _:-ms-fullscreen :root .lookbook {
   border: 1px solid #606060;
   color: #606060;
   margin-right: 10px;
+  transition: color 0.5s, background 0.5s;
 }
 .info__addbtn {
   margin-bottom: 100px;
@@ -200,6 +203,7 @@ _:-ms-fullscreen :root .lookbook {
   background: #f68236;
   color: white;
   border: none;
+  transition: background 0.5s;
 }
 .sizebtnChosen:hover {
   background: #e67429;
@@ -220,7 +224,7 @@ _:-ms-fullscreen :root .lookbook {
   }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1023px) {
   .images__container {
     width: 400px;
     height: 300px;
@@ -240,7 +244,7 @@ _:-ms-fullscreen :root .lookbook {
     padding-top: 30px;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .info__container h2 {
     font-size: 22px;
   }

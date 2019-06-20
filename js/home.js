@@ -1,3 +1,4 @@
+"use strict";
 const slider = document.querySelector(".signup__slider");
 const sliderMovingPart = document.querySelector(".slider__container");
 const signupButton = document.querySelector(".signup__button");
@@ -22,20 +23,19 @@ function moveSliderRight() {
 }
 function checkEmail(e) {
   e.preventDefault();
+  const validationText = emailValidationDiv.querySelector("p");
   if (validateEmail()) {
     emailValidationDiv.setAttribute(
       "class",
       "form__validationDiv form__validationDiv--valid"
     );
-    emailValidationDiv.querySelector("p").innerText =
-      "We added you to our list";
+    validationText.innerText = "We added you to our list";
   } else {
     emailValidationDiv.setAttribute(
       "class",
       "form__validationDiv form__validationDiv--invalid"
     );
-    emailValidationDiv.querySelector("p").innerText =
-      "Please enter valid e-mail";
+    validationText.innerText = "Please enter valid e-mail";
   }
 
   emailValidationDiv.style.display = "block";

@@ -1,3 +1,4 @@
+"use strict";
 const searchButton = document.querySelector(".searchBtn");
 const searchButtonImg = searchButton.querySelector("img");
 const searchInput = document.querySelector(".searchInput");
@@ -29,7 +30,6 @@ function getWidth() {
 }
 function toggleSearch(e) {
   searchToggle.checked = !searchToggle.checked;
-
   if (!searchToggle.checked && searchInput.value !== "") {
     let link = document.createElement("a");
     link.setAttribute("href", "2_category-all.html");
@@ -40,7 +40,13 @@ function toggleSearch(e) {
     }
     searchInput.style.visibility = "visible";
     searchButton.style.background = "#606060";
-    searchButtonImg.setAttribute("src", "img/icons/search.png");
+    let oldImg = searchButton.querySelector("img");
+    let newImg = document.createElement("img");
+    newImg.src = "img/icons/search.png";
+    newImg.alt = "Search";
+    newImg.title = "Search";
+    searchButton.replaceChild(newImg, oldImg);
+    searchInput.focus();
   } else {
     if (getWidth() <= 768) {
       unshiftSearch();
@@ -61,18 +67,28 @@ function unshiftSearch() {
   document.querySelector("nav ul").style.marginTop = "20px";
 }
 function hideInput() {
+  let oldImg = searchButton.querySelector("img");
   searchInput.style.visibility = "hidden";
   searchButton.style.background = "white";
-  searchButtonImg.setAttribute("src", "img/icons/searchDark.png");
+  let newImg = document.createElement("img");
+  newImg.src = "img/icons/searchDark.png";
+  newImg.alt = "Search";
+  newImg.title = "Search";
+  searchButton.replaceChild(newImg, oldImg);
 }
 function onPress(e) {
   if (e.key === "Enter") {
     let link = document.createElement("a");
     link.setAttribute("href", "2_category-all.html");
+    link.setAttribute("type", "hidden");
+    document.body.appendChild(link);
     link.click();
+    link.remove();
   } else if (e.key === "Escape" || e.key === "Esc") {
     searchToggle.checked = !searchToggle.checked;
-    unshiftSearch();
+    if (getWidth() <= 768) {
+      unshiftSearch();
+    }
     hideInput();
   }
 }

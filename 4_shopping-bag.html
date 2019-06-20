@@ -2,6 +2,12 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="description" content="Minimalistic shop" />
+    <meta
+      name="keywords"
+      content="Shop, buy, Shopper, clothes, coats, tshirts, outerwear"
+    />
+    <meta name="author" content="Pylypenko Serhii" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="css/global.css" />
@@ -15,7 +21,7 @@
       <div class="header__container">
         <div class="logo">
           <a href="1_home.html">
-            <img src="img/logo.png" alt="logo" title="logo" />
+            <img src="img/logo.png" alt="Logo" title="Logo" />
           </a>
         </div>
         <nav>
@@ -41,13 +47,13 @@
             class="searchInput"
           />
           <button class="searchBtn">
-            <img src="img/icons/searchDark.png" alt="search" title="search" />
+            <img src="img/icons/searchDark.png" alt="Search" title="Search" />
             <input type="checkbox" class="toggleSearchCheck" />
           </button>
         </div>
         <a href="4_shopping-bag.html">
           <div class="basket">
-            <img src="img/icons/basket.png" alt="basket" title="basket" />
+            <img src="img/icons/basket.png" alt="Basket" title="Basket" />
             <p>Basket (0)</p>
           </div>
         </a>
@@ -94,8 +100,8 @@
                     width="100"
                     height="100"
                     style="background: gray"
-                    alt="product1"
-                    name="product1"
+                    alt="Product1"
+                    title="Product1"
                   />
                 </td>
 
@@ -109,7 +115,9 @@
                 <td class="size">39</td>
                 <td><input type="number" value="1" min="1" /></td>
                 <td class="product__price">€ 99.95</td>
-                <td><img src="img/icons/x.png" alt="delete" name="delete" /></td>
+                <td>
+                  <img src="img/icons/x.png" alt="delete" title="Delete" />
+                </td>
               </tr>
               <tr class="product">
                 <td>
@@ -118,8 +126,8 @@
                     width="100"
                     height="100"
                     style="background: gray"
-                    alt="product2"
-                    name="product2"
+                    alt="Product2"
+                    title="Product2"
                   />
                 </td>
 
@@ -134,7 +142,7 @@
                 <td><input type="number" value="1" min="1" /></td>
                 <td class="product__price">€ 99.95</td>
                 <td>
-                  <img src="img/icons/x.png" alt="delete" name="delete" />
+                  <img src="img/icons/x.png" alt="delete" title="Delete" />
                 </td>
               </tr>
               <tr class="product">
@@ -143,8 +151,8 @@
                     src="img/product_images/thumbnail1.jpg"
                     width="100"
                     height="100"
-                    alt="product3"
-                    name="product3"
+                    alt="Product3"
+                    title="Product3"
                   />
                 </td>
                 <td>
@@ -155,10 +163,12 @@
                 </td>
                 <td class="color">One Color</td>
                 <td class="size">S</td>
-                <td><input type="number" value="1" min="1" /></td>
+                <td>
+                  <input type="number" value="1" min="1" max="100" />
+                </td>
                 <td class="product__price">€ 99.95</td>
                 <td>
-                  <img src="img/icons/x.png" alt="delete" name="delete" />
+                  <img src="img/icons/x.png" alt="delete" title="Delete" />
                 </td>
               </tr>
             </tbody>
@@ -216,17 +226,20 @@
           <div>
             <img
               src="img/icons/twitter.png"
-              alt="twitter"
+              alt="Twitter"
+              title="Twitter"
               class="footer__social"
             />
             <img
               src="img/icons/facebook.png"
-              alt="facebook"
+              alt="Facebook"
+              title="Facebook"
               class="footer__social"
             />
             <img
               src="img/icons/instagram.png"
-              alt="instagram"
+              alt="Instagram"
+              title="Instagram"
               class="footer__social"
             />
           </div>
@@ -234,7 +247,6 @@
       </div>
     </footer>
     <script src="js/global.js"></script>
-
     <script src="js/shopping-bag.js"></script>
   </body>
 </html>

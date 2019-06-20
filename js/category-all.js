@@ -1,3 +1,4 @@
+"use strict";
 const slider = document.querySelector(".lookbook__container");
 const sliderMovingPart = document.querySelector(".slider__container");
 

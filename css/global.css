@@ -102,6 +102,7 @@ a:hover {
   color: white;
   border: none;
   letter-spacing: 1px;
+  transition: background 0.5s;
 }
 .button--accent:hover {
   background: #e67429;
@@ -119,6 +120,8 @@ a:hover {
   background: white;
   color: #303030;
   border: solid 1px #a3a3a3;
+
+  transition: background 0.5s, color 0.5s;
 }
 
 .button--secondary:hover {
@@ -192,13 +195,13 @@ _:-ms-fullscreen,
 .search input {
   height: 40px;
   opacity: 1;
+  padding: 5px 0px 5px 15px;
 }
 .toggleSearchCheck {
   display: none;
 }
 .search input::placeholder {
   color: black;
-  padding: 5px 0px 5px 15px;
   font-family: "latoItalic";
 }
 .search button {
@@ -207,7 +210,6 @@ _:-ms-fullscreen,
   right: 5px;
   height: 40px;
   width: 40px;
-  /*background: #606060;*/
   background: white;
   border: 1px solid #606060;
   cursor: pointer;
@@ -302,7 +304,7 @@ _:-ms-fullscreen :root .shiftedInputBtn {
     min-width: 414px;
   }
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1023px) {
   .header__container {
     flex-direction: column;
     padding: 20px 0px 0px;
@@ -357,7 +359,7 @@ _:-ms-fullscreen :root .shiftedInputBtn {
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   nav ul {
     margin-top: 20px;
   }

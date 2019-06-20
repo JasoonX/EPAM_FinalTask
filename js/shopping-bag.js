@@ -1,3 +1,4 @@
+"use strict";
 const orderNow = document.querySelector(".order__container .button--accent");
 const basketText = document.querySelector(".basket p");
 const table = document.querySelector("table");
@@ -8,8 +9,9 @@ updateBasket();
 
 orderNow.addEventListener("click", order);
 table.addEventListener("click", tableDeleteItem);
-table.addEventListener("change", tableChangeAmount);
-
+[].forEach.call(table.getElementsByTagName("input"), function(value) {
+  value.addEventListener("change", tableChangeAmount);
+});
 function order() {
   localStorage.removeItem("cart");
   let link = document.createElement("a");
@@ -58,12 +60,16 @@ function updateBasket() {
 }
 
 function tableChangeAmount(e) {
-  if (e.target.nodeName === "INPUT") {
+  if (parseInt(e.target.value)) {
     let row = e.target.parentNode.parentNode;
-    let rowPrice = row.querySelector(".product__price").innerText;
-    let size = row.querySelector(".size");
+    let size = row.querySelector(".size").innerText;
     let model = row.querySelector(".productname h3").innerText;
-    if (parseInt(size) !== NaN && localStorage.getItem("cart")) {
+    let color = row.querySelector(".color").innerText;
+    if (
+      parseInt(size) !== NaN &&
+      color !== "Black" &&
+      localStorage.getItem("cart")
+    ) {
       let cart = JSON.parse(localStorage.getItem("cart"));
       cart.forEach(function(value) {
         if (value.model === model && value.size === size) {
@@ -71,6 +77,8 @@ function tableChangeAmount(e) {
           return;
         }
       });
+      localStorage.removeItem("cart");
+      localStorage.setItem("cart", JSON.stringify(cart));
     }
     recalculatePrice();
     updateBasket();
@@ -120,8 +128,8 @@ function generateProductBag() {
       productImage.src = img;
       productImage.width = 100;
       productImage.height = 100;
-      productImage.alt = "product" + (index + 3);
-      productImage.name = "product" + (index + 3);
+      productImage.alt = "Product" + (index + 4);
+      productImage.title = "Product" + (index + 4);
       productImageCell.appendChild(productImage);
       let productDescCell = document.createElement("td");
       let productDescCellCont = document.createElement("div");
@@ -151,8 +159,8 @@ function generateProductBag() {
       let productDeleteCell = document.createElement("td");
       let productDeleteImage = document.createElement("img");
       productDeleteImage.src = "img/icons/x.png";
-      productDeleteImage.alt = "delete";
-      productDeleteImage.name = "delete";
+      productDeleteImage.alt = "Delete";
+      productDeleteImage.title = "Delete";
       productDeleteCell.appendChild(productDeleteImage);
       productRow.appendChild(productImageCell);
       productRow.appendChild(productDescCell);
@@ -162,7 +170,6 @@ function generateProductBag() {
       productRow.appendChild(productAmountCell);
       productRow.appendChild(productDeleteCell);
       tbody.appendChild(productRow);
-      //TODO: GENERATE CART
     });
   }
 }

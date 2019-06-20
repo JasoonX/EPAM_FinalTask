@@ -28,7 +28,7 @@ h1 {
   }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1023px) {
   h1 {
     padding-top: 50px;
   }
@@ -43,7 +43,7 @@ h1 {
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
 }
 
 @media screen and (max-width: 414px) {

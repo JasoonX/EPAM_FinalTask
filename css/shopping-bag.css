@@ -76,7 +76,9 @@ tfoot {
 .order {
   padding-bottom: 75px;
 }
-
+table thead tr {
+  border-top: none;
+}
 @media screen and (max-width: 1240px) {
   _:-ms-fullscreen,
   :root .shoppingbag,
@@ -94,7 +96,7 @@ tfoot {
   }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1023px) {
   colgroup {
     display: none;
   }
@@ -110,12 +112,13 @@ tfoot {
   }
   .order button {
     margin: auto;
-    width: 50%;
+    width: 400px;
   }
   .order__container {
     display: flex;
     flex-direction: column-reverse;
     text-align: center;
+    width: 100%;
   }
   tr {
     display: block;
@@ -132,7 +135,7 @@ tfoot {
   .color,
   .size,
   td input,
-  td img[name="delete"],
+  td img[title="Delete"],
   .product__price {
     position: absolute;
   }
@@ -148,7 +151,7 @@ tfoot {
     left: 125px;
     top: 120px;
   }
-  td img[name="delete"] {
+  td img[title="Delete"] {
     right: 10px;
     top: 30px;
   }
@@ -171,13 +174,9 @@ tfoot {
     right: 0px;
     top: 0px;
   }
-
-  .order button {
-    width: 400px;
-  }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   table {
     width: 95%;
   }

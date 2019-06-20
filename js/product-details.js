@@ -1,3 +1,4 @@
+"use strict";
 const slider = document.querySelector(".lookbook__container");
 const sliderMovingPart = document.querySelector(".slider__container");
 const smallImgs = document.querySelector(".images__smallImgs");
@@ -19,9 +20,20 @@ function switchImages(e) {
     let smallImgNo = smallImgStyle
       .getPropertyValue("background-image")
       .slice(-7, -6);
+    if (isNaN(parseInt(smallImgNo))) {
+      smallImgNo = smallImgStyle
+        .getPropertyValue("background-image")
+        .slice(-6, -5);
+    }
     let bigImgNo = containerStyle
       .getPropertyValue("background-image")
       .slice(-7, -6);
+    if (isNaN(parseInt(bigImgNo))) {
+      bigImgNo = containerStyle
+        .getPropertyValue("background-image")
+        .slice(-6, -5);
+    }
+
     e.target.parentNode.style.backgroundImage =
       "url(img/product_images/thumbnail" + bigImgNo + ".jpg)";
     imgsContainer.style.backgroundImage =

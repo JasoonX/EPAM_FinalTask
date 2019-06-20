@@ -1,0 +1,207 @@
+.shoppingbag,
+.breadcrumbs {
+  width: 100%;
+  background: white;
+  margin: auto;
+  min-width: 1240px;
+  max-width: 1240px;
+}
+
+_:-ms-fullscreen,
+:root .shoppingbag,
+_:-ms-fullscreen,
+:root .breadcrumbs {
+  width: 92%;
+  max-width: 1240px;
+}
+.shoppingbag {
+  text-align: center;
+}
+.shoppingbag__container {
+  width: 95%;
+  margin: auto;
+}
+table {
+  width: 100%;
+  text-align: left;
+  border-collapse: collapse;
+}
+th,
+td {
+  padding: 15px 5px;
+}
+tbody td {
+  height: 150px;
+}
+td input {
+  width: 30px;
+}
+table td:nth-child(7n) {
+  padding-left: 25px;
+}
+.productname {
+  position: relative;
+  top: 50px;
+}
+.shoppingbag__container h2 {
+  padding: 50px 0px 0px;
+}
+.shoppingbag__container p {
+  margin: 0px 0px 100px;
+  color: #606060;
+}
+tfoot {
+  background: rgb(249, 249, 249);
+  border: none;
+}
+.subtotal {
+  font-family: "latoBold", sans-serif;
+}
+.price {
+  color: #f68236;
+  font-weight: 900;
+}
+.order__container {
+  width: 95%;
+  margin: 100px auto 0px;
+  text-align: right;
+  padding-bottom: 50px;
+  border-bottom: 1px solid #e5e5e5;
+}
+.order a {
+  margin-right: 100px;
+  text-decoration: underline;
+  color: black;
+}
+.order {
+  padding-bottom: 75px;
+}
+table thead tr {
+  border-top: none;
+}
+@media screen and (max-width: 1240px) {
+  _:-ms-fullscreen,
+  :root .shoppingbag,
+  _:-ms-fullscreen,
+  :root .breadcrumbs {
+    width: 100%;
+    min-width: 0px;
+    max-width: 1240px;
+  }
+  .shoppingbag,
+  .breadcrumbs {
+    min-width: 0px;
+    width: 100%;
+    max-width: 1240px;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  colgroup {
+    display: none;
+  }
+  thead {
+    display: none;
+  }
+  table {
+    width: 80%;
+    margin: auto;
+  }
+  .order a {
+    margin: 20px 0;
+  }
+  .order button {
+    margin: auto;
+    width: 400px;
+  }
+  .order__container {
+    display: flex;
+    flex-direction: column-reverse;
+    text-align: center;
+    width: 100%;
+  }
+  tr {
+    display: block;
+    position: relative;
+  }
+  tbody tr {
+    height: 175px;
+  }
+  .productname {
+    position: relative;
+    top: 20px;
+    left: 10px;
+  }
+  .color,
+  .size,
+  td input,
+  td img[title="Delete"],
+  .product__price {
+    position: absolute;
+  }
+  .color {
+    left: 120px;
+    top: 60px;
+  }
+  .size {
+    left: 120px;
+    top: 80px;
+  }
+  td input {
+    left: 125px;
+    top: 120px;
+  }
+  td img[title="Delete"] {
+    right: 10px;
+    top: 30px;
+  }
+  .product__price {
+    right: 0px;
+    top: 120px;
+  }
+
+  tfoot tr {
+    height: 50px;
+  }
+  .subtotal {
+    position: absolute;
+    right: 100px;
+    top: 0px;
+  }
+
+  .price {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  table {
+    width: 95%;
+  }
+  .shoppingbag__container h2 {
+    font-size: 26px;
+  }
+  .shoppingbag__container .subHeaderSmall {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .shoppingbag,
+  .breadcrumbs {
+    width: 414px;
+    min-width: 414px;
+    max-width: 414px;
+  }
+
+  _:-ms-fullscreen,
+  :root .shoppingbag,
+  _:-ms-fullscreen,
+  :root .breadcrumbs {
+    width: 414px;
+    min-width: 414px;
+    max-width: 414px;
+  }
+}

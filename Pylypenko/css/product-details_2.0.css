@@ -1,0 +1,16 @@
+.images__smallImg--1 {
+  background: url("../img/product_images/thumbnail5.jpg");
+}
+
+.images__smallImg--2 {
+  background: url("../img/product_images/thumbnail6.jpg");
+}
+
+.images__smallImg--3 {
+  background: url("../img/product_images/thumbnail7.jpg");
+}
+
+.images__container {
+  background: url("../img/product_images/productimage8.jpg");
+  background-size: cover;
+}
